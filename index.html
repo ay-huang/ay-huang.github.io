@@ -5,248 +5,47 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Amy Huang</title>
   <meta name="description" content="Amy Huang — Ph.D. candidate in Economics at the University of Toronto. Economics of education and labor economics.">
-  <style>
-    :root {
-      --bg: #fdfcfb;
-      --text: #23212a;
-      --muted: #6d6a75;
-      --accent: #b3446c;
-      --accent-soft: #f7e8ee;
-      --card: #ffffff;
-      --border: #e9e4e0;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #17161b;
-        --text: #eeecf0;
-        --muted: #a29fab;
-        --accent: #e07a9e;
-        --accent-soft: #2c2129;
-        --card: #201f26;
-        --border: #322f3a;
-      }
-    }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      line-height: 1.7;
-      -webkit-font-smoothing: antialiased;
-    }
-    a { color: var(--accent); }
-    .wrap { max-width: 720px; margin: 0 auto; padding: 0 1.5rem; }
-
-    nav {
-      position: sticky; top: 0;
-      background: var(--bg);
-      border-bottom: 1px solid var(--border);
-      z-index: 10;
-    }
-    nav .wrap {
-      display: flex; align-items: center; justify-content: space-between;
-      padding-top: 0.8rem; padding-bottom: 0.8rem;
-    }
-    .brand { font-weight: 650; text-decoration: none; color: var(--text); letter-spacing: -0.01em; }
-    nav ul { display: flex; gap: 1.25rem; list-style: none; }
-    nav ul a { text-decoration: none; color: var(--muted); font-size: 0.95rem; }
-    nav ul a:hover { color: var(--accent); }
-
-    header.hero { padding: 4rem 0 3rem; }
-    .hero .wrap { display: flex; gap: 2.5rem; align-items: center; flex-wrap: wrap; }
-    .portrait {
-      width: 168px; height: 168px; border-radius: 50%;
-      background: var(--accent-soft);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 3rem; font-weight: 600; color: var(--accent);
-      flex-shrink: 0;
-      overflow: hidden;
-      border: 1px solid var(--border);
-    }
-    .portrait img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 25%; }
-    .hero h1 { font-size: 2.5rem; letter-spacing: -0.02em; line-height: 1.15; margin-bottom: 0.6rem; }
-    .hero .lede { font-size: 1.15rem; color: var(--muted); max-width: 26em; }
-    .hero .lede strong { color: var(--text); font-weight: 600; }
-
-    section { padding: 2.5rem 0; border-top: 1px solid var(--border); }
-    h2 {
-      font-size: 1.35rem; letter-spacing: -0.01em; margin-bottom: 1.25rem;
-      color: var(--accent);
-    }
-    .about p + p { margin-top: 0.9rem; }
-
-    .paper {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 1.4rem 1.5rem;
-      margin-bottom: 1.1rem;
-    }
-    .paper h3 { font-size: 1.08rem; line-height: 1.45; margin-bottom: 0.3rem; }
-    .paper h3 a { color: var(--text); text-decoration: none; }
-    .paper h3 a:hover { color: var(--accent); }
-    .paper .meta { font-size: 0.92rem; color: var(--muted); font-style: italic; margin-bottom: 0.6rem; }
-    .paper .meta a { color: var(--muted); }
-    details summary {
-      cursor: pointer; color: var(--accent); font-size: 0.92rem; font-weight: 500;
-      list-style: none;
-    }
-    details summary::-webkit-details-marker { display: none; }
-    details summary::before { content: "+ "; }
-    details[open] summary::before { content: "− "; }
-    details p { margin-top: 0.6rem; font-size: 0.95rem; color: var(--muted); }
-
-    .btn {
-      display: inline-block;
-      background: var(--accent); color: #fff !important;
-      text-decoration: none; font-weight: 550;
-      padding: 0.6rem 1.3rem; border-radius: 999px;
-      font-size: 0.98rem;
-    }
-    .btn:hover { opacity: 0.88; }
-    .btn.ghost {
-      background: transparent; color: var(--accent) !important;
-      border: 1.5px solid var(--accent);
-    }
-    .btn-row { display: flex; gap: 0.8rem; flex-wrap: wrap; }
-
-    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
-    @media (max-width: 560px) { .contact-grid { grid-template-columns: 1fr; } }
-    .contact-grid h4 {
-      font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.1em;
-      color: var(--muted); margin-bottom: 0.4rem;
-    }
-    address { font-style: normal; color: var(--text); }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 1.75rem 0 2.5rem;
-      color: var(--muted); font-size: 0.85rem;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
   <nav>
     <div class="wrap">
-      <a class="brand" href="#">Amy Huang</a>
+      <a class="brand" href="index.html">Amy Huang</a>
       <ul>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#cv">CV</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cv.html">CV</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </div>
   </nav>
 
-  <header class="hero">
-    <div class="wrap">
-      <div class="portrait">
-        <img src="photo.jpg" alt="Amy Huang">
-      </div>
-      <div>
-        <h1>Welcome!</h1>
-        <p class="lede">
-          I am a fourth-year <strong>Ph.D. candidate in Economics</strong> at the
-          <strong>University of Toronto</strong>.
-        </p>
-      </div>
-    </div>
-  </header>
-
-  <section class="about">
-    <div class="wrap">
-      <h2>About</h2>
-      <p>
-        My research agenda lies primarily in the economics of education and labor
-        economics. I am particularly interested in the role of grade inflation in
-        the school choice decision and how these distortions in ability signals
-        impact students&rsquo; long-term outcomes.
-      </p>
-    </div>
-  </section>
-
-  <section id="research">
-    <div class="wrap">
-      <h2>Research</h2>
-
-      <div class="paper">
-        <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5767304">The Impact of Merit-Based Scholarships on Student Outcomes: Evidence from Ontario</a></h3>
-        <p class="meta">Revise &amp; resubmit at <em>Economics of Education Review</em></p>
-        <details>
-          <summary>Abstract</summary>
+  <main>
+    <section class="hero">
+      <div class="wrap">
+        <div class="portrait">
+          <img src="photo.jpg" alt="Amy Huang">
+        </div>
+        <div class="hero-text">
+          <h1>Welcome!</h1>
           <p>
-            Merit-based scholarships are widely used by post-secondary institutions
-            to attract high-achieving students, yet causal evidence on their
-            effectiveness remains mixed. This paper employs a fuzzy regression
-            discontinuity design that exploits undisclosed high school grade cutoffs
-            to evaluate a lump-sum merit-based entrance scholarship at the University
-            of Toronto for domestic undergraduates. The estimates indicate a null
-            average effect on yield that masks pronounced heterogeneity: the
-            scholarship substantially raises enrolment among students from
-            lower-income neighbourhoods, from outside the Greater Toronto Area, and
-            those who have a stronger prior preference for the University.
-            Descriptive estimates for first-year GPA and graduation are null, which
-            suggests that the scholarship does not substantially improve the academic
-            quality of enrollees.
+            I am a fourth-year <strong>Ph.D. candidate in Economics</strong> at the
+            <strong>University of Toronto</strong>.
           </p>
-        </details>
-      </div>
-
-      <div class="paper">
-        <h3><a href="https://drive.google.com/file/d/1nD0aR5CbmubLt4fE7myYXTbJkHiDF3ix/view">Persevere or Pivot? The Causal Impact of Grade Shocks on the College Major Decision</a></h3>
-        <p class="meta">with <a href="https://sites.google.com/view/annabelthornton/home">Annabel Thornton</a> &middot; submitted</p>
-        <details>
-          <summary>Abstract</summary>
           <p>
-            Using variation in exam scheduling, we estimate the causal effect of
-            grade shocks on college major choice. Writing two exams in quick
-            succession reduces performance on the latter by 1.05 percentage points
-            and subsequently reduces the likelihood of majoring and graduating in
-            that subject area by 6% and 9%, respectively. We find that a
-            1&nbsp;percentage point drop in course grade raises the probability of
-            graduating in a lower-earning subject area by 24%. These findings
-            underscore the sensitivity of long-term human capital decisions to
-            relatively minor academic disruptions.
-          </p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <section id="cv">
-    <div class="wrap">
-      <h2>Curriculum Vitae</h2>
-      <div class="btn-row">
-        <a class="btn" href="https://drive.google.com/file/d/1aCtU7QlYbKrH1NE2zABKWSVaoGN6z31W/view">View my CV</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact">
-    <div class="wrap">
-      <h2>Contact</h2>
-      <div class="contact-grid">
-        <div>
-          <h4>Email</h4>
-          <p>ayue.huang(at)mail.utoronto.ca</p>
-          <h4 style="margin-top:1rem">Elsewhere</h4>
-          <p>
-            <a href="https://www.linkedin.com/in/amy-huang-822934149/">LinkedIn</a>
-            &middot; <a href="https://github.com/ay-huang">GitHub</a>
+            My research agenda lies primarily in the economics of education and labor
+            economics. I am particularly interested in the role of grade inflation in
+            the school choice decision and how these distortions in ability signals
+            impact students&rsquo; long-term outcomes.
           </p>
         </div>
-        <div>
-          <h4>Office</h4>
-          <address>
-            Max Gluskin House, Room 134<br>
-            University of Toronto<br>
-            150 St. George Street<br>
-            Toronto, ON M5S 3G7
-          </address>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
     <div class="wrap">

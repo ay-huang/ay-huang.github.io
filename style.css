@@ -1,0 +1,148 @@
+:root {
+  --bg: #fdfcfb;
+  --text: #23212a;
+  --muted: #6d6a75;
+  --accent: #b3446c;
+  --accent-soft: #f7e8ee;
+  --card: #ffffff;
+  --border: #e9e4e0;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #17161b;
+    --text: #eeecf0;
+    --muted: #a29fab;
+    --accent: #e07a9e;
+    --accent-soft: #2c2129;
+    --card: #201f26;
+    --border: #322f3a;
+  }
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 300;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+a { color: var(--accent); }
+strong { font-weight: 500; }
+
+.wrap { width: 100%; padding: 0 5vw; }
+
+nav {
+  position: sticky; top: 0;
+  background: var(--bg);
+  border-bottom: 1px solid var(--border);
+  z-index: 10;
+}
+nav .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  padding-top: 1rem; padding-bottom: 1rem;
+}
+.brand {
+  font-weight: 600; text-decoration: none; color: var(--text);
+  letter-spacing: 0.02em; font-size: 1.1rem;
+}
+nav ul { display: flex; gap: 2rem; list-style: none; }
+nav ul a {
+  text-decoration: none; color: var(--muted);
+  font-size: 0.95rem; font-weight: 400;
+}
+nav ul a:hover { color: var(--accent); }
+nav ul a.active { color: var(--accent); font-weight: 500; }
+
+main { flex: 1; }
+
+/* Home */
+.hero { padding: 5rem 0; }
+.hero .wrap {
+  display: flex; gap: 5vw; align-items: center; flex-wrap: wrap;
+}
+.portrait {
+  width: min(320px, 70vw); height: min(320px, 70vw);
+  border-radius: 50%;
+  background: var(--accent-soft);
+  flex-shrink: 0;
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+.portrait img {
+  width: 100%; height: 100%;
+  object-fit: cover; object-position: 50% 25%;
+  display: block;
+}
+.hero-text { flex: 1; min-width: min(28rem, 90vw); }
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3.4rem);
+  font-weight: 600; letter-spacing: -0.01em;
+  line-height: 1.15; margin-bottom: 1rem;
+  color: var(--accent);
+}
+.hero-text p { font-size: clamp(1rem, 1.3vw, 1.2rem); max-width: 60ch; }
+.hero-text p + p { margin-top: 1rem; }
+
+/* Inner pages */
+.page { padding: 4rem 0; }
+.page-title {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  font-weight: 600; letter-spacing: -0.01em;
+  color: var(--accent);
+  margin-bottom: 2.2rem;
+}
+
+.paper {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 1.8rem 2rem;
+  margin-bottom: 1.4rem;
+}
+.paper h3 { font-size: 1.15rem; font-weight: 500; line-height: 1.5; margin-bottom: 0.3rem; }
+.paper h3 a { color: var(--text); text-decoration: none; }
+.paper h3 a:hover { color: var(--accent); }
+.paper .meta { font-size: 0.95rem; color: var(--muted); font-style: italic; margin-bottom: 0.7rem; }
+.paper .meta a { color: var(--muted); }
+details summary {
+  cursor: pointer; color: var(--accent);
+  font-size: 0.95rem; font-weight: 400;
+  list-style: none;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::before { content: "+ "; }
+details[open] summary::before { content: "− "; }
+details p { margin-top: 0.7rem; font-size: 0.98rem; color: var(--muted); max-width: 90ch; }
+
+.btn {
+  display: inline-block;
+  background: var(--accent); color: #fff !important;
+  text-decoration: none; font-weight: 500;
+  padding: 0.7rem 1.6rem; border-radius: 999px;
+  font-size: 1rem;
+}
+.btn:hover { opacity: 0.88; }
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 2.5rem;
+  max-width: 70rem;
+}
+.contact-grid h4 {
+  font-size: 0.8rem; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.12em;
+  color: var(--muted); margin-bottom: 0.4rem;
+}
+.contact-grid h4 + p, .contact-grid address { margin-bottom: 1.4rem; }
+address { font-style: normal; color: var(--text); }
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1.75rem 0 2.5rem;
+  color: var(--muted); font-size: 0.85rem; font-weight: 300;
+}

@@ -65,8 +65,8 @@ main { flex: 1; }
   display: flex; gap: 5vw; align-items: center; flex-wrap: wrap;
 }
 .portrait {
-  width: min(320px, 70vw); height: min(320px, 70vw);
-  border-radius: 50%;
+  width: min(400px, 80vw); height: min(400px, 80vw);
+  border-radius: 18px;
   background: var(--accent-soft);
   flex-shrink: 0;
   overflow: hidden;
@@ -124,9 +124,15 @@ details p { margin-top: 0.7rem; font-size: 0.98rem; color: var(--muted); max-wid
   max-width: 62rem;
   height: 82vh;
   min-height: 30rem;
+  margin: 0 auto;
   border: 1px solid var(--border);
   border-radius: 16px;
   background: var(--card);
+}
+.cv-fallback {
+  max-width: 62rem;
+  margin: 1rem auto 0;
+  text-align: center;
 }
 
 .btn {

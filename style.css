@@ -1,5 +1,5 @@
 :root {
-  --bg: #fdfcfb;
+  --bg: #ffffff;
   --text: #23212a;
   --muted: #6d6a75;
   --accent: #b3446c;
@@ -33,7 +33,12 @@ body {
 a { color: var(--accent); }
 strong { font-weight: 700; }
 
-.wrap { width: 100%; padding: 0 5vw; }
+.wrap {
+  width: 100%;
+  max-width: 72rem;
+  margin: 0 auto;
+  padding: 0 5vw;
+}
 
 nav {
   position: sticky; top: 0;
@@ -86,6 +91,14 @@ h1 {
 }
 .hero-text p { font-size: clamp(1rem, 1.3vw, 1.2rem); max-width: 60ch; }
 .hero-text p + p { margin-top: 1rem; }
+
+/* Contact on home */
+.home-contact { padding: 0 0 5rem; }
+.home-contact h2 {
+  font-size: 1.5rem; font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 1.5rem;
+}
 
 /* Inner pages */
 .page { padding: 4rem 0; }

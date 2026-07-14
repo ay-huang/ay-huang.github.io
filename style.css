@@ -52,7 +52,7 @@ nav .wrap {
 }
 .brand {
   font-weight: 700; text-decoration: none; color: var(--text);
-  letter-spacing: 0.02em; font-size: 1.1rem;
+  letter-spacing: 0.02em; font-size: 1.3rem;
 }
 nav ul { display: flex; gap: 2rem; list-style: none; }
 nav ul a {
@@ -68,9 +68,17 @@ main { flex: 1; }
 .hero { padding: 5rem 0; }
 .hero .wrap {
   display: flex; gap: 5vw; align-items: center; flex-wrap: wrap;
+  justify-content: center;
   max-width: 88rem;
 }
-.hero-media { flex-shrink: 0; }
+.hero-media {
+  flex-shrink: 0;
+  /* Cancel out the icon row's height so the text centers on the photo alone */
+  margin-bottom: calc(-1.4rem - 22px);
+}
+@media (max-width: 60rem) {
+  .hero-media { margin-bottom: 0; }
+}
 .portrait-links {
   display: flex;
   justify-content: center;
@@ -96,14 +104,14 @@ main { flex: 1; }
   object-fit: cover; object-position: 50% 25%;
   display: block;
 }
-.hero-text { flex: 1; min-width: min(28rem, 90vw); }
+.hero-text { flex: 0 1 60ch; min-width: min(28rem, 90vw); }
 h1 {
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 700; letter-spacing: -0.01em;
   line-height: 1.15; margin-bottom: 1rem;
   color: var(--accent);
 }
-.hero-text p { font-size: clamp(1rem, 1.3vw, 1.2rem); max-width: 60ch; }
+.hero-text p { font-size: 1rem; max-width: 60ch; }
 .hero-text p + p { margin-top: 1rem; }
 .contact-line { margin-top: 1.6rem; }
 .contact-line strong { color: var(--accent); }
@@ -142,7 +150,11 @@ h1 {
   color: var(--muted); font-style: italic;
   white-space: nowrap;
 }
-.paper h3 .coauthor a { color: var(--muted); }
+.paper h3 .coauthor a {
+  color: var(--muted);
+  font-weight: 700;
+  text-decoration: underline;
+}
 details summary {
   cursor: pointer; color: var(--accent);
   font-size: 0.95rem; font-weight: 400;
